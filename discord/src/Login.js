@@ -1,10 +1,11 @@
 import React from "react";
 import "./Login.css";
 import { Button } from "@material-ui/core";
+import { auth } from "./firebase";
 
 function Login() {
 	const signIn = () => {
-
+		auth;
 	}
 	return (
 		<div className="login">
