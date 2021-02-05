@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Chat.css";
 import ChatHeader from "./ChatHeader";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
@@ -59,7 +59,9 @@ function Chat() {
 					<input 
 						value={input} 
 						disabled={!channelId} 
-						onChange={e => setInput(e.target.value)} placeholder={`Message #${channelName}` />
+						onChange={e => setInput(e.target.value)} 
+						placeholder={`Message #${channelName}`}
+					/>
 					<button 
 						disabled={!channelId}
 						onClick={sendMessage}
